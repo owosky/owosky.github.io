@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minecraft</title>
+    
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" href="minecraft-favicon.png">
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Arial', sans-serif; /* You can change 'Arial' to your preferred modern font */
+            background-color: #000; /* Dark background */
+            color: #fff; /* White text */
+            margin: 0;
+            overflow: hidden; /* Hide overflow to ensure a full-page background */
+            height: 100vh; /* 100% of viewport height for vertical centering */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section {
+            margin: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #2ecc71; /* Emerald green color */
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-block; /* Ensure all buttons have the rounded shape */
+        }
+
+        /* Create a starry night effect with smaller white dots */
+        .starry-night {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place the stars behind the content */
+        }
+
+        .dot {
+            position: absolute;
+            background-color: #fff; /* White dots */
+            width: 10px; /* Adjust the size of the dots */
+            height: 10px;
+            border-radius: 50%;
+            opacity: 0.5; /* Adjust the opacity of the dots */
+        }
+
+        .title {
+            font-size: 48px; /* Increased font size for the main title */
+            font-family: 'Times New Roman', Times, serif; /* Change the font to Times New Roman */
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Minecraft</h1>
+
+        <div class="section">
+            <h2>Vanilla</h2>
+            <div class="buttons">
+                <a href="Vanilla\mc-1.8.8\index.html" class="button">1.8.8</a>
+                <a href="Vanilla\mc-1.5.2\index.html" class="button">1.5.2</a>
+                <a href="Vanilla\mc-1.3\index.html" class="button">Beta 1.3</a>
+            </div>
+        </div>
+
+        <div class "section">
+            <h2>Normal Clients</h2>
+            <div class="buttons">
+                <a href="Normal\resent-1.8.8\index.html" class="button">Resent 1.8.8</a>
+                <a href="Normal\Koneclient-1.8.8\index.html" class="button">Kone 1.8.8</a>
+                <a href="Normal\precision-1.5.2\index.html" class="button">Precision 1.5.2</a>
+                <a href="Normal\shadowclient2.5-1.8.8\index.html" class="button">Shadow 1.8.8</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Hacked Clients</h2>
+            <div class="buttons">
+                <a href="Hacked\UwU-client-1.8.8\index.html" class="button">UwU 1.8.8 B2</a>
+                <a href="Hacked\dragonxv3-1.8.8\index.html" class="button">DragonX V3 1.8.8</a>
+                <a href="Hacked\fuchsiaX-1.5.2\index.html" class="button">FuchsiaX 1.5.2</a>
+                <a href="Hacked\piclient-1.8.8\index.html" class="button">PI 1.8.8</a>
+                <a href="Hacked\oddfuture-1.5.2\index.html" class="button">OddFuture 1.5.2</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="starry-night" id="starryNight"></div>
+
+    <script>
+        // JavaScript to create and randomize the positions of the dots
+        const starryNight = document.getElementById("starryNight");
+        const dotCount = 100; // Number of dots
+        const dotSize = 10; // Smaller dot size in pixels
+
+        for (let i = 0; i < dotCount; i++) {
+            const dot = document.createElement("div");
+            dot.className = "dot";
+            dot.style.width = dotSize + "px"; // Fixed the missing "px" unit
+            dot.style.height = dotSize + "px"; // Fixed the missing "px" unit
+            dot.style.left = Math.random() * 100 + "vw"; // Random horizontal position
+            dot.style.top = Math.random() * 100 + "vh"; // Random vertical position
+            starryNight.appendChild(dot);
+        }
+    </script>
+</body>
+</html>
