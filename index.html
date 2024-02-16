@@ -12,12 +12,12 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
+            font-family: 'Arial', sans-serif; /* You can change 'Arial' to your preferred modern font */
+            background-color: #000; /* Dark background */
+            color: #fff; /* White text */
             margin: 0;
-            overflow: hidden;
-            height: 100vh;
+            overflow: hidden; /* Hide overflow to ensure a full-page background */
+            height: 100vh; /* 100% of viewport height for vertical centering */
         }
 
         .container {
@@ -38,52 +38,38 @@
         .button {
             padding: 10px 20px;
             margin: 10px;
-            background-color: #2ecc71;
-            color: #fff;
-            text-decoration: none;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .starry-night {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .dot {
-            position: absolute;
-            background-color: #fff;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            opacity: 0.5;
-        }
-
-        .title {
-            font-size: 48px;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 20px;
-        }
-
-        /* New style for the fixed button */
-        .fixed-button {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            padding: 10px 20px;
             background-color: #2ecc71; /* Emerald green color */
             color: #fff;
             text-decoration: none;
             border: none;
             border-radius: 20px;
             cursor: pointer;
-            display: inline-block;
+            display: inline-block; /* Ensure all buttons have the rounded shape */
+        }
+
+        /* Create a starry night effect with smaller white dots */
+        .starry-night {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place the stars behind the content */
+        }
+
+        .dot {
+            position: absolute;
+            background-color: #fff; /* White dots */
+            width: 10px; /* Adjust the size of the dots */
+            height: 10px;
+            border-radius: 50%;
+            opacity: 0.5; /* Adjust the opacity of the dots */
+        }
+
+        .title {
+            font-size: 48px; /* Increased font size for the main title */
+            font-family: 'Times New Roman', Times, serif; /* Change the font to Times New Roman */
+            margin: 20px;
         }
     </style>
 </head>
@@ -100,7 +86,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class "section">
             <h2>Normal Clients</h2>
             <div class="buttons">
                 <a href="Normal\resent-1.8.8\index.html" class="button">Resent 1.8.8</a>
@@ -122,9 +108,6 @@
         </div>
     </div>
 
-    <!-- New fixed button element -->
-    <a href="Proxy/index.html" class="fixed-button">Proxy</a>
-
     <div class="starry-night" id="starryNight"></div>
 
     <script>
@@ -136,10 +119,10 @@
         for (let i = 0; i < dotCount; i++) {
             const dot = document.createElement("div");
             dot.className = "dot";
-            dot.style.width = dotSize + "px";
-            dot.style.height = dotSize + "px";
-            dot.style.left = Math.random() * 100 + "vw";
-            dot.style.top = Math.random() * 100 + "vh";
+            dot.style.width = dotSize + "px"; // Fixed the missing "px" unit
+            dot.style.height = dotSize + "px"; // Fixed the missing "px" unit
+            dot.style.left = Math.random() * 100 + "vw"; // Random horizontal position
+            dot.style.top = Math.random() * 100 + "vh"; // Random vertical position
             starryNight.appendChild(dot);
         }
     </script>
