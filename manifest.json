@@ -1,0 +1,15 @@
+{
+  "name": "Minecraft",
+  "short_name": "Minecraft",
+  "icons": [
+    {
+      "src": "minecraft-favicon.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://owosky.github.io",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}
